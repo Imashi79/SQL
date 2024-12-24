@@ -52,3 +52,17 @@ where total_amount > 50 and total_quantity> 1
 
 select * from Orders
 where total_amount > 50 or total_quantity> 1
+
+--order by--
+select customer_name from customer 
+order by customer_name asc   --ascending order--
+
+select name from Products
+order by name desc  --descending order--
+
+select name, price from Products
+order by name, price    -- first check name order and then check price order--
+
+select * from Orders
+where total_quantity > 2
+order by order_rating
