@@ -66,3 +66,16 @@ order by name, price    -- first check name order and then check price order--
 select * from Orders
 where total_quantity > 2
 order by order_rating
+
+-- using left and right
+-- check what are customers names start with vowels
+select * from customer
+where Upper(left(customer_name,1)) in ('A','E','I','O','u')
+
+-- check what are the customer names end not start with vowels
+select * from customer
+where Upper(left(customer_name,1)) not in ('A','E','I','O','u')
+
+-- check what are the customer names end with a and e
+select * from customer
+where Lower(right(customer_name,1)) in ('a', 'e', 'n')
